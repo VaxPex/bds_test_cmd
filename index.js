@@ -8,14 +8,7 @@ const bedrock_server_path = __dirname + "/bedrock_server/";
 
 fs.writeFileSync(bedrock_server_path + "server.properties", fs.readFileSync(__dirname + "/modefied_files/server.properties").toString('utf-8'));
 
-child_process.exec(bedrock_server_path + "bedrock_server.exe", (error, stderr, stdout) => {
-	if (error) {
-		throw new Error(error.message);
-	}
-	if (stderr) {
-		console.log("stderr: " + stderr);
-	}
-});
+child_process.execSync(bedrock_server_path + "bedrock_server.exe");
 
 console.log("Started...");
 
