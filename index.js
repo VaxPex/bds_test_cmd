@@ -21,7 +21,7 @@ const relay = new Relay({
 		offline: false
 	}
 })
-relay.canLong = console.debug;
+//relay.canLong = console.debug;
 relay.listen();
 
 function generateCommandOverloads(parameterName = 'args', valueType = 53, enumType = 'valid', optinal = true, options = {
